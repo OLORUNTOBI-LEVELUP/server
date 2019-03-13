@@ -1,16 +1,24 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { Jumbotron, Row, Col, Image, Button } from "react-bootstrap";
+import { Jumbotron, Row, Col, Image, Button, Nav, Navbar} from "react-bootstrap";
 import "./Landingpage.css";
 
 export default class Landingpage extends Component{
     render(){
         return (
         <div>
+            <Navbar bg="dark" variant="dark">
+            <Navbar.Brand href="/">Leave.Management</Navbar.Brand>
+            <Nav className="mr-auto">
             
+            <Nav.Link className="link" href="/Signin"><Button className="signin-btn">Login</Button></Nav.Link>
+            <Nav.Link className="pricing">Pricing</Nav.Link>
+            </Nav>
+            </Navbar>
+                    
             
             <Jumbotron>
-                <h2>Welcome to TimeOff Management</h2>
+                <h2>Welcome to Leave Management</h2>
                 <p>A comprehensive time off manager your team will love</p>
                 <div className="button">
                     <Link to="/Signup">
@@ -36,7 +44,7 @@ export default class Landingpage extends Component{
 
             </Row>
             <h3>We help Companies manage Time off days for their Employees.</h3>
-            <footer>&copy; Timeoff 2019</footer>
+            <footer>&copy; Leave 2019</footer>
            
             
         </div>

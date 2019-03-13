@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom"
+import { Nav, Navbar, Button} from "react-bootstrap"
 
 import "./Signin.css";
 
@@ -33,6 +34,8 @@ export default class Signin extends React.Component {
 		  fields["password"] = "";
           this.setState({fields:fields});
           alert("Login successful");
+          
+          
       }
 
     }
@@ -80,8 +83,20 @@ export default class Signin extends React.Component {
     }
     render() {
         return (
+          <div>
+          <div>
+             <Navbar bg="dark" variant="dark">
+            <Navbar.Brand href="/">Leave.Management</Navbar.Brand>
+            <Nav className="mr-auto">
+            
+            <Nav.Link className="link" href="/Signin"><Button className="signin-btn">Login</Button></Nav.Link>
+            <Nav.Link className="pricing" href="/dashboard">Pricing</Nav.Link>
+            </Nav>
+            </Navbar>
+          </div>
         
         <div id="main-registration-container">
+        
          <div id="register">
           <h5> </h5>
             <form method="post"  name="userRegistrationForm"  onSubmit= {this.submituserRegistrationForm} >
@@ -92,13 +107,14 @@ export default class Signin extends React.Component {
                         <label>Password</label>
                         <input type="password" name="password" value={this.state.fields.password} onChange={this.handleChange} />
                         <div className="errorMsg">{this.state.errors.password}</div>
-                        <input type="submit" className="button1"  value="Login"/>
+                        <Link to="/dashboard"><input type="submit" className="button1" href="/dashboard"  value="Login" /></Link>
            
            <p className="secondp"><Link to="">Forgot password?</Link> || <Link to="/Signup">Create account</Link></p>
            </form>
 
        </div>
 	
+     </div>
      </div>
      
      

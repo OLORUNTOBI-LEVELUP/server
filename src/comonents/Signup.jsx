@@ -1,5 +1,6 @@
 import React from "react";
 import "./Signup.css"
+import { Nav, Navbar, Button } from "react-bootstrap";
 
 
 export default class Signup extends React.Component {
@@ -188,6 +189,14 @@ export default class Signup extends React.Component {
   render() {
     return (
     <div id="main-registration-container">
+		 <Navbar bg="dark" variant="dark">
+            <Navbar.Brand href="/">Leave.Management</Navbar.Brand>
+            <Nav className="mr-auto">
+            
+            <Nav.Link className="link" href="/Signin"><Button className="signin-btn">Login</Button></Nav.Link>
+            <Nav.Link className="pricing" href="/dashboard">Pricing</Nav.Link>
+            </Nav>
+            </Navbar>
      <div id="register">
         <h5>Register New Account</h5>
         <form method="post"  name="userRegistrationForm"  onSubmit= {this.submituserRegistrationForm} >
