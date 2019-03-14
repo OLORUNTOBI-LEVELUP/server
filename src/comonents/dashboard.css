@@ -15,10 +15,10 @@ table {
   }
 
   .month {
-    padding: 60px 25px;
-    height: 20px;
+    padding: 30px 25px;
+    height: 10px;
     width: 100%;
-    background: #1abc9c;
+    background: grey;
     text-align: center;
   }
   
@@ -75,7 +75,7 @@ table {
   
   .days li .active {
     padding: 5px;
-    background: #1abc9c;
+    background: grey;
     color: white !important
   }
   
@@ -94,8 +94,13 @@ table {
   }
 
   h4, h6 {
-    margin-left: 210px;
+    margin-left: 50px;
   }
   .calendar {
-    margin-left: 210px;
+    margin-left: 50px;
+  }
+  .toggle-button {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
   }

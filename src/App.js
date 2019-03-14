@@ -5,6 +5,7 @@ import Landingpage from "./comonents/Landingpage";
 import Signup from "./comonents/Signup";
 import Signin from './comonents/Signin';
 import Dashboard from './comonents/dashboard';
+import Abscencerequest from './comonents/abscencerequest';
 
 
 class App extends Component {
@@ -17,6 +18,7 @@ class App extends Component {
           <Route path="/Signup" component={Signup} />
           <Route path="/Signin" component={Signin} /> 
           <Route path="/dashboard" component={Dashboard} />
+          <Route path="/abscencerequest" component={Abscencerequest} />
 
         </div>
       </Router>

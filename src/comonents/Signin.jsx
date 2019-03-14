@@ -107,7 +107,7 @@ export default class Signin extends React.Component {
                         <label>Password</label>
                         <input type="password" name="password" value={this.state.fields.password} onChange={this.handleChange} />
                         <div className="errorMsg">{this.state.errors.password}</div>
-                        <Link to="/dashboard"><input type="submit" className="button1" href="/dashboard"  value="Login" /></Link>
+                        <input type="submit" className="button1" href="/dashboard"  value="Login" />
            
            <p className="secondp"><Link to="">Forgot password?</Link> || <Link to="/Signup">Create account</Link></p>
            </form>
