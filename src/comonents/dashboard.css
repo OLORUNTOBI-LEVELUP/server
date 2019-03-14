@@ -104,3 +104,8 @@ table {
     background-color: #fff;
     border-color: #ccc;
   }
+
+  .toggle-button:hover {
+    background-color: grey;
+    border-color: grey;
+  }
