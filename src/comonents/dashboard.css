@@ -98,6 +98,8 @@ table {
   }
   .calendar {
     margin-left: 50px;
+    font-size: 1.5em;
+    margin-top: 10px;
   }
   .toggle-button {
     color: #333;
