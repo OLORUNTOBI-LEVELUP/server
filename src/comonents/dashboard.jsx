@@ -57,7 +57,7 @@ export default class Dashboard extends React.Component{
                             <Col><h2>Details</h2><hr></hr>Supervisor: User<br></br>Department: sales<br></br>Allowance in 2019: 16 days</Col>
                         </Row>
                     </Container><br></br>
-                    <h2>Upcoming Months <button class="btn btn-primary toggle-button" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    <h2>Upcoming Months <button class="btn btn-dark toggle-button" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
     Show more
   </button></h2><br></br>
   

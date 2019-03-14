@@ -104,14 +104,15 @@ table {
   .toggle-button {
     color: #333;
     background-color: #fff;
-    border-color: #ccc;
+    border-color: grey;
+    
   }
 
   .toggle-button:hover {
     background-color: grey;
     border-color: grey;
   }
-  .mr-auto1{
+  .mr-auto1 {
     margin-left: 900px;
     
 }
