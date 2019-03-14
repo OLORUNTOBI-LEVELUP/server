@@ -1,16 +1,28 @@
 import React from "react";
 import "./abscencerequest.css";
+import { Nav, Navbar } from "react-bootstrap";
 
 
 export default class Abscencerequest extends React.Component {
     render(){
         return (
-            <div class="modal-dialog">
+            <div>
+                  <Navbar bg="dark" variant="dark">
+                <Navbar.Brand href="/">Leave.Management</Navbar.Brand>
+                <Nav className="mr-auto mr-auto1">
+                <Nav.Link href="#home">Calendar</Nav.Link>
+                <Nav.Link href="#features">Team View</Nav.Link>
+                <Nav.Link href="/abscencerequest">Abscence Request</Nav.Link>
+                </Nav>
+            
+               </Navbar>
+    <div class="modal-dialog">
+              
     <div class="modal-content">
     <form method="POST" action="/calendar/bookleave/">
       <div class="modal-header">
       <h5 class="modal-title" id="exampleModalLabel">New absence</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        {/*<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>*/}
        
       </div>
       <div class="modal-body">
@@ -78,6 +90,7 @@ export default class Abscencerequest extends React.Component {
       </div>
     </form>
     </div>
+  </div>
   </div>
   
         );
