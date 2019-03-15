@@ -19,7 +19,7 @@ export default class Abscencerequest extends React.Component {
     <div class="modal-dialog">
               
     <div class="modal-content">
-    <form method="POST" action="/calendar/bookleave/">
+    <form method="POST" >
       <div class="modal-header">
       <h5 class="modal-title" id="exampleModalLabel">New absence</h5>
         {/*<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>*/}

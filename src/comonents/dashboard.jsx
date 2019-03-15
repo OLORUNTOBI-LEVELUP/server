@@ -3,20 +3,38 @@ import { Nav, Navbar, Container, Row, Col } from "react-bootstrap";
 import "./dashboard.css";
 
 export default class Dashboard extends React.Component{
+    constructor(props) {
+        super(props);
+        this.state = {isToggleOn: true};
+    
+    
+        this.handleClick = this.handleClick.bind(this);
+      }
+    
+        handleClick() {
+            this.setState(function(prevState) {
+                return {isToggleOn: !prevState.isToggleOn};
+            });
+        }
+        
+
     render(){
         return (
+            
             <div>
+                
               <Navbar bg="dark" variant="dark">
                 <Navbar.Brand href="/">Leave.Management</Navbar.Brand>
                 <Nav className="mr-auto mr-auto1">
                 <Nav.Link href="#home">Calendar</Nav.Link>
                 <Nav.Link href="#features">Team View</Nav.Link>
-                <Nav.Link href="/abscencerequest">Abscence Request</Nav.Link>
+                <Nav.Link href="/abscencerequest">New Abscence</Nav.Link>
                 </Nav>
             
                </Navbar>
                <h1 className="calendar">Employee Calendar</h1>
-               <h4>Users Calendar for 2019</h4>
+               <h4>Oloruntobi Awoderu's Calendar for 2019</h4>         
+
                <div><br></br>
                    <h4>Statistics</h4><hr></hr>
                    <Container>
@@ -54,14 +72,15 @@ export default class Dashboard extends React.Component{
 
                             </Col>
                             <Col><h2>Used so far</h2><hr></hr>No approved requests so far</Col>
-                            <Col><h2>Details</h2><hr></hr>Supervisor: User<br></br>Department: sales<br></br>Allowance in 2019: 16 days</Col>
+                            <Col><h2>Profile</h2><hr></hr>Name: Oloruntobi Awoderu<br></br>Company Name: LevelUp Academy<br></br>Department: Software/IT<br></br>Position: Junior Developer<br></br>Supervisor: Mayowa</Col>
+
+                                
                         </Row>
                     </Container><br></br>
-                    <h2>Upcoming Months <button class="btn btn-dark toggle-button" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-    Show more
+                    <h2>Upcoming Months <button class="btn btn-dark toggle-button" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" id="toggle" onClick={this.handleClick}>
+                    {this.state.isToggleOn ? 'Show more' : 'Less....'}
   </button></h2><br></br>
-  
- 
+                    
                     <Container>
                     
                         <Row>
@@ -776,10 +795,57 @@ export default class Dashboard extends React.Component{
                 </div><br></br>
                
                  <h4 className="head">All my abscences in 2019</h4><br></br>
-               <h6 className="bottom">There are no leave requests yet.</h6>
+                 <Row>
+                 <Col>
+                 <table className="table1">
+                 
+                             
+                                <tr>
+                                    <td>Type</td>
+                                    <td> Deducted</td>
+                                    <td>Dates</td>
+                                    <td>Approved by</td>
+                                    <td>Status</td>
+                                </tr>
+                                <tr>
+                                    <td>Holiday</td>
+                                    <td>2</td>
+                                    <td>From 2018-01-01 to 2018-01-03</td>
+                                    <td>Mayowa</td>
+                                    <td>Approved</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Holiday</td>
+                                    <td>2</td>
+                                    <td>From 2018-01-15 to 2018-01-17</td>
+                                    <td>Mayowa</td>
+                                    <td>Approved</td>
+                                </tr>
+                                <tr>
+                                    <td>Sick Leave</td>
+                                    <td>2</td>
+                                    <td>From 2018-02-10 to 2018-02-12</td>
+                                    <td>Mayowa</td>
+                                    <td>Approved</td>
+                                </tr>
+                                <tr>
+                                    <td>Paternity leave</td>
+                                    <td>14</td>
+                                    <td>From 2018-02-15 to 2018-03-01</td>
+                                    <td>Mayowa</td>
+                                    <td>Approved</td>
+                                </tr>
+                                
+                               
+                                </table>
+                 
+
+               
                <hr></hr>
                <footer>&copy; Leave 2019</footer>
-
+                </Col>
+                </Row>
             </div>
         );
     }
