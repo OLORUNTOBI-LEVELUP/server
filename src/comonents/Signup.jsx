@@ -64,7 +64,7 @@ export default class Signup extends React.Component {
           formIsValid = false;
           errors["username"] = "*Please enter alphabet characters only.";
         }
-			}
+			}  
 			
       if (!fields["country"]) {
         formIsValid = false;
@@ -191,7 +191,7 @@ export default class Signup extends React.Component {
     <div id="main-registration-container">
 		 <Navbar bg="dark" variant="dark">
             <Navbar.Brand href="/">Leave.Management</Navbar.Brand>
-            <Nav className="mr-auto">
+            <Nav className="ml-auto">
             
             <Nav.Link className="link" href="/Signin"><Button className="signin-btn">Login</Button></Nav.Link>
             <Nav.Link className="pricing" href="/dashboard">Pricing</Nav.Link>

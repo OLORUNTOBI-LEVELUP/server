@@ -25,7 +25,7 @@ export default class Dashboard extends React.Component{
                 
               <Navbar bg="dark" variant="dark">
                 <Navbar.Brand href="/">Leave.Management</Navbar.Brand>
-                <Nav className="mr-auto mr-auto1">
+                <Nav className="ml-auto">
                 <Nav.Link href="#home">Calendar</Nav.Link>
                 <Nav.Link href="#features">Team View</Nav.Link>
                 <Nav.Link href="/abscencerequest">New Abscence</Nav.Link>
@@ -93,7 +93,7 @@ export default class Dashboard extends React.Component{
                                     <span ></span>
                                     </li>
                                 </ul>
-                                </div>
+                            </div>
 
                                 <ul class="weekdays">
                                 <li>Mo</li>

@@ -87,7 +87,7 @@ export default class Signin extends React.Component {
           <div>
              <Navbar bg="dark" variant="dark">
             <Navbar.Brand href="/">Leave.Management</Navbar.Brand>
-            <Nav className="mr-auto">
+            <Nav className="ml-auto">
             
             <Nav.Link className="link" href="/Signin"><Button className="signin-btn">Login</Button></Nav.Link>
             <Nav.Link className="pricing" href="/dashboard">Pricing</Nav.Link>
