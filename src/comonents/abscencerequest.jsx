@@ -4,17 +4,13 @@ import { Nav, Navbar } from "react-bootstrap";
 
 
 
-var date_diff_indays = function(date1, date2) {
-   date1 = new Date(document.getElementById('from'));
-   date2 = new Date(document.getElementById("to"));
-  var duration = Math.floor((Date.UTC(date2.getFullYear(), date2.getMonth(), date2.getDate()) - Date.UTC(date1.getFullYear(), date1.getMonth(), date1.getDate()) ) /(1000 * 60 * 60 * 24));
-    return duration;
-  }
 
 
 export default class Abscencerequest extends React.Component {
   constructor() {
     super();
+    
+   
     this.state = {
       fields: {},
       errors: {}
@@ -46,6 +42,7 @@ export default class Abscencerequest extends React.Component {
     }
 
   }
+  
   validateForm() {
 
     let fields = this.state.fields;
@@ -75,7 +72,7 @@ export default class Abscencerequest extends React.Component {
                 <Navbar.Brand href="/">Leave.Management</Navbar.Brand>
                 <Nav className="ml-auto">
                 <Nav.Link href="#home">Calendar</Nav.Link>
-                <Nav.Link href="#features">Team View</Nav.Link>
+                <Nav.Link href="/teamview">Team View</Nav.Link>
                 <Nav.Link href="/abscencerequest">Abscence Request</Nav.Link>
                 </Nav>
             
@@ -139,6 +136,7 @@ export default class Abscencerequest extends React.Component {
                 <div class="input-group">
                   <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
                   <input type="date" class="form-control book-leave-to-input" id="to" data-provide="datepicker" data-date-autoclose="1" data-date-format="yyyy-mm-dd" data-date-week-start="1"  name="to_date"  />
+                
                   
                 </div>
               </div>

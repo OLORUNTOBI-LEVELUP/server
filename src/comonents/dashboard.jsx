@@ -27,7 +27,7 @@ export default class Dashboard extends React.Component{
                 <Navbar.Brand href="/">Leave.Management</Navbar.Brand>
                 <Nav className="ml-auto">
                 <Nav.Link href="#home">Calendar</Nav.Link>
-                <Nav.Link href="#features">Team View</Nav.Link>
+                <Nav.Link href="/teamview">Team View</Nav.Link>
                 <Nav.Link href="/abscencerequest">New Abscence</Nav.Link>
                 </Nav>
             

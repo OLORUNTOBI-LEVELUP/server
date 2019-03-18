@@ -6,6 +6,7 @@ import Signup from "./comonents/Signup";
 import Signin from './comonents/Signin';
 import Dashboard from './comonents/dashboard';
 import Abscencerequest from './comonents/abscencerequest';
+import Teamview from './comonents/teamview';
 
 
 class App extends Component {
@@ -19,6 +20,7 @@ class App extends Component {
           <Route path="/Signin" component={Signin} /> 
           <Route path="/dashboard" component={Dashboard} />
           <Route path="/abscencerequest" component={Abscencerequest} />
+          <Route path="/teamview" component={Teamview} />
 
         </div>
       </Router>

@@ -575,7 +575,7 @@ export default class Signup extends React.Component {
         <input type="submit" className="button1"  value="Register"/>
         </form>
     </div>
-		<footer>&copy; TimeOff 2019</footer>
+		<footer>&copy; Leave 2019</footer>
 </div>
 
       );
