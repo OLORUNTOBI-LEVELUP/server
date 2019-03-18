@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import { Jumbotron, Row, Col, Image, Button, Nav, Navbar} from "react-bootstrap";
 import "./Landingpage.css";
 
+
+
+
 export default class Landingpage extends Component{
     render(){
         return (
