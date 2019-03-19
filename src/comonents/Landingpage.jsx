@@ -15,7 +15,7 @@ export default class Landingpage extends Component{
             <Nav className="ml-auto">
             
             <Nav.Link className="link" href="/Signin"><Button className="signin-btn">Login</Button></Nav.Link>
-            <Nav.Link className="pricing" href="/dashboard"><Button>Dashboard</Button></Nav.Link>
+           
             </Nav>
             </Navbar>
                     

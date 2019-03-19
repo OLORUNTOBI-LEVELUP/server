@@ -578,7 +578,7 @@ export default class Signup extends React.Component {
 	<option timeZoneId="82" gmtAdjustment="GMT+13:00" useDaylightTime="0" value="13">(GMT+13:00) Nuku'alofa</option>
 </select>	
 <div className="errorMsg">{this.state.errors.timezone}</div>
-        <input type="submit" className="button1"  value="Register"/>
+        <input type="submit" className="button1" href="/dashboard" value="Register"/>
         </form>
     </div>
 		<footer>&copy; Leave 2019</footer>
