@@ -32,7 +32,6 @@ export default class Signup extends React.Component {
           fields["companyname"] = "";
           fields["username"] = "";
           fields["emailid"] = "";
-					fields["mobileno"] = "";
 					fields["age"] = "";
 					fields["work"] = "";
 					fields["department"] = "";
@@ -43,7 +42,8 @@ export default class Signup extends React.Component {
 					fields["timezone"] = "";
 					fields["date"] = "";
 					this.setState({fields:fields});
-          alert("Form submitted");
+					alert("Form submitted");
+					window.location.href="http://www.google.com";
       }
 
     }
@@ -104,6 +104,12 @@ export default class Signup extends React.Component {
 			if (!fields["work"]) {
         formIsValid = false;
         errors["work"] = "*Please enter the type of work you do.";
+			}
+			if (typeof fields["work"] !== "undefined") {
+        if (!fields["work"].match(/^[a-zA-Z ]*$/)) {
+          formIsValid = false;
+          errors["work"] = "*Please enter alphabet characters only.";
+        }
       }
 
       if (typeof fields["username"] !== "undefined") {

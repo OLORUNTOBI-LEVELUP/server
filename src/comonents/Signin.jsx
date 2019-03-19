@@ -33,7 +33,8 @@ export default class Signin extends React.Component {
           fields["emailid"] = "";
 		  fields["password"] = "";
           this.setState({fields:fields});
-          alert("Login successful");
+          window.location.href="/dashboard";
+         // alert("Login successful");
           
           
       }
