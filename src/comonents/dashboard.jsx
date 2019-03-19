@@ -29,6 +29,8 @@ export default class Dashboard extends React.Component{
                 <Nav.Link href="/dashboard">dashboard</Nav.Link>
                 <Nav.Link href="/teamview">Team View</Nav.Link>
                 <Nav.Link href="/abscencerequest">New Abscence</Nav.Link>
+                <Nav.Link href="/Signin">Sign out</Nav.Link>
+                
                 </Nav>
             
                </Navbar>
