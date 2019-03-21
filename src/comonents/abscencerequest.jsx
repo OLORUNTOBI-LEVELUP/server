@@ -63,9 +63,10 @@ export default class Abscencerequest extends React.Component {
                     <Navbar bg="dark" variant="dark">
                   <Navbar.Brand href="/">Leave.Management</Navbar.Brand>
                   <Nav className="ml-auto">
-                  <Nav.Link href="#home">Calendar</Nav.Link>
+                  <Nav.Link href="/dashboard">Dashboard</Nav.Link>
                   <Nav.Link href="/teamview">Team View</Nav.Link>
                   <Nav.Link href="/abscencerequest">Abscence Request</Nav.Link>
+                  <Nav.Link href="/Signin">Sign out</Nav.Link>
                   </Nav>
               
                  </Navbar>

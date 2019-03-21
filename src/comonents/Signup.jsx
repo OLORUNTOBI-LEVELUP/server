@@ -194,7 +194,7 @@ export default class Signup extends React.Component {
 
   render() {
     return (
-    <div id="main-registration-container">
+    <div id="main-registration-container" className="col-xs-3 col-sm-4 col-md-5 col-lg-12">
 		 <Navbar bg="dark" variant="dark">
             <Navbar.Brand href="/">Leave.Management</Navbar.Brand>
             <Nav className="ml-auto">

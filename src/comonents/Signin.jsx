@@ -91,7 +91,7 @@ export default class Signin extends React.Component {
             <Nav className="ml-auto">
             
             <Nav.Link className="link" href="/Signin"><Button className="signin-btn">Login</Button></Nav.Link>
-            <Nav.Link className="pricing" href="/dashboard">Pricing</Nav.Link>
+            
             </Nav>
             </Navbar>
           </div>

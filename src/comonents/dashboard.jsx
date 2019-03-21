@@ -21,12 +21,12 @@ export default class Dashboard extends React.Component{
     render(){
         return (
             
-            <div>
+            <div className="col-xs-3 col-sm-4 col-md-5 col-lg-12" >
                 
               <Navbar bg="dark" variant="dark">
                 <Navbar.Brand href="/">Leave.Management</Navbar.Brand>
                 <Nav className="ml-auto">
-                <Nav.Link href="/dashboard">dashboard</Nav.Link>
+                <Nav.Link href="/Dashboard">dashboard</Nav.Link>
                 <Nav.Link href="/teamview">Team View</Nav.Link>
                 <Nav.Link href="/abscencerequest">New Abscence</Nav.Link>
                 <Nav.Link href="/Signin">Sign out</Nav.Link>
@@ -83,7 +83,7 @@ export default class Dashboard extends React.Component{
                     {this.state.isToggleOn ? 'Show more' : 'Less....'}
   </button></h2><br></br>
                     
-                    <Container>
+                    <Container >
                     
                         <Row>
                             <Col>
