@@ -12,11 +12,7 @@ h2, p , h3 {
 .person-wrapper {
     margin-bottom: 2em;
 }
-.profile-pic {
-    width: 50%;
-    height: 300px;
 
-}
 body{
     overflow-x:hidden;
 }

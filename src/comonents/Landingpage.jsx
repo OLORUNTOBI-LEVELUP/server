@@ -31,16 +31,16 @@ export default class Landingpage extends Component{
             </Jumbotron>
             <Row className="show-grid text-center">
                 <Col xs={12} sm={4} className="person-wrapper">
-                    <Image src="assets/images.jpg" circle className="profile-pic"/>
+                    <Image src="assets/download1.jpg"  className="profile-pic"/>
                     <p>Are you going on a maternity leave?</p>
                 </Col>
                 
                 <Col xs={12} sm={4} className="person-wrapper">
-                    <Image src="assets/vacation2.jpg" circle className="profile-pic"/>
+                    <Image src="assets/download3.jpg"  className="profile-pic"/>
                     <p>Are you going on a vacation?</p>
                 </Col>
                 <Col xs={12} sm={4} className="person-wrapper">
-                    <Image src="assets/download.jpg" circle className="profile-pic"/>
+                    <Image src="assets/download2.jpg"  className="profile-pic"/>
                     <p>Do you need time off for your health?</p>
                 </Col>
 
