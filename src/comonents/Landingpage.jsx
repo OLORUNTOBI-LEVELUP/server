@@ -41,7 +41,7 @@ export default class Landingpage extends Component{
                 </Col>
                 <Col xs={12} sm={4} className="person-wrapper">
                     <Image src="assets/download2.jpg"  className="profile-pic"/>
-                    <p>Do you need time off for your health?</p>
+                    <p>Do you need time off for your wedding?</p>
                 </Col>
 
 
