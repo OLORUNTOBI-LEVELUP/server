@@ -6,23 +6,28 @@ import "./teamview.css";
 export default class Teamview extends React.Component{
     render(){
         return (
-            <div className="col-xs-3 col-sm-4 col-md-5 col-lg-12">
-                  <Navbar bg="dark" variant="dark">
-                <Navbar.Brand href="/">Leave.Management</Navbar.Brand>
-                <Nav className="ml-auto">
-                <Nav.Link href="/dashboard">Dashboard</Nav.Link>
-                <Nav.Link href="/teamview">Team View</Nav.Link>
-                <Nav.Link href="/abscencerequest">Abscence Request</Nav.Link>
-                <Nav.Link href="/Signin">Sign out</Nav.Link>
-                </Nav>
-            
-               </Navbar>
+            <div >
+                  <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+                    <Navbar.Brand href="/">Leave Management</Navbar.Brand>
+                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                    <Navbar.Collapse id="responsive-navbar-nav">
+                        <Nav className="ml-auto">
+                        <Nav.Link href="/dashboard">Dashboard</Nav.Link>
+                        <Nav.Link href="/teamview">Team view</Nav.Link>
+                        <Nav.Link href="/abscencerequest">Abscence request</Nav.Link>      
+                        <Nav.Link href="/Signin">Sign out</Nav.Link>
+                    
+                        </Nav>
+                    
+                    </Navbar.Collapse>
+                </Navbar>;
 
                 <div>
                     <h1 className="teamview-head">Oloruntobi Awoderu's Messages</h1>
                     <h1 className="teamview-p">Leave request to approve</h1>
+                    <div className="overflow">
                     <table className="table-teamview">
-                 
+                            <tbody>
                              
                                 <tr>
                                     <td>Employee</td>
@@ -82,11 +87,15 @@ export default class Teamview extends React.Component{
                                     <td><Button className="reject" variant="warning">Reject</Button></td>
                                     <td><Button>Approve</Button></td>
                                 </tr>
+                            </tbody>
                     </table>
+                    </div>
                 </div>
                 <div>
                     <h1 className="teamview-p1">All Leaves</h1>
+                    <div className="overflow">
                     <table className="table1">
+                    <tbody>
                  
                              
                  <tr>
@@ -130,7 +139,9 @@ export default class Teamview extends React.Component{
                      <td>Pending</td>
                      
                  </tr>
+                 </tbody>
                  </table>
+                 </div>
 
                 </div>
                 <footer>&copy; Leave 2019</footer>

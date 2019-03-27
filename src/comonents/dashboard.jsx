@@ -21,19 +21,22 @@ export default class Dashboard extends React.Component{
     render(){
         return (
             
-            <div className="col-xs-3 col-sm-4 col-md-5 col-lg-12" >
+            <div >
                 
-              <Navbar bg="dark" variant="dark">
-                <Navbar.Brand href="/">Leave.Management</Navbar.Brand>
-                <Nav className="ml-auto">
-                <Nav.Link href="/Dashboard">dashboard</Nav.Link>
-                <Nav.Link href="/teamview">Team View</Nav.Link>
-                <Nav.Link href="/abscencerequest">New Abscence</Nav.Link>
-                <Nav.Link href="/Signin">Sign out</Nav.Link>
-                
-                </Nav>
-            
-               </Navbar>
+                <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+                    <Navbar.Brand href="/"> Leave Management</Navbar.Brand>
+                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                    <Navbar.Collapse id="responsive-navbar-nav">
+                        <Nav className="ml-auto">
+                        <Nav.Link href="/dashboard">Dashboard</Nav.Link>
+                        <Nav.Link href="/teamview">Team view</Nav.Link>
+                        <Nav.Link href="/abscencerequest">Abscence request</Nav.Link>      
+                        <Nav.Link href="/Signin">Sign out</Nav.Link>
+                    
+                        </Nav>
+                    
+                    </Navbar.Collapse>
+                </Navbar>;
                <h1 className="calendar">Employee Calendar</h1>
                <h4>Oloruntobi Awoderu's Calendar for 2019</h4>         
 
@@ -45,31 +48,32 @@ export default class Dashboard extends React.Component{
                             <Col>
                                                                 
                                 <table >
-                                <tr>
-                                    <th colSpan="2">Allowance breakdown</th>
-                                </tr>
-                                <tr>
-                                    <td>Nominal allowance</td>
-                                    <td>  20</td>
-                                </tr>
-                                <tr>
-                                    <td>Carried over from 2018</td>
-                                    <td>  0</td>
-                                </tr>
-                                <tr>
-                                    <td>Individual adjustment</td>
-                                    <td>  0</td>
-                                </tr>
-                                <tr>
-                                    <td>Start/end of employment</td>
-                                    <td>  0</td>
-                                </tr>
-                                <tr>
-                                    <td>Used so far</td>
-                                    <td>  0</td>
-                                </tr>
-                                
-                               
+                                    <tbody>
+                                        <tr>
+                                            <th colSpan="2">Allowance breakdown</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Nominal allowance</td>
+                                            <td>  20</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Carried over from 2018</td>
+                                            <td>  0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Individual adjustment</td>
+                                            <td>  0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Start/end of employment</td>
+                                            <td>  0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Used so far</td>
+                                            <td>  0</td>
+                                        </tr>
+                                        
+                                 </tbody>
                                 </table>
 
                             </Col>
@@ -79,15 +83,15 @@ export default class Dashboard extends React.Component{
                                 
                         </Row>
                     </Container><br></br>
-                    <h2>Upcoming Months <button class="btn btn-dark toggle-button" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" id="toggle" onClick={this.handleClick}>
+                    <h2>Upcoming Months <button className="btn btn-dark toggle-button" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" id="toggle" onClick={this.handleClick}>
                     {this.state.isToggleOn ? 'Show more' : 'Less....'}
   </button></h2><br></br>
                     
                     <Container >
                     
                         <Row>
-                            <Col>
-                            <div class="month">      
+                            <Col xs={12} sm={12} lg={3}>
+                            <div className="month">      
                                 <ul>
                                     
                                     <li>
@@ -97,7 +101,7 @@ export default class Dashboard extends React.Component{
                                 </ul>
                             </div>
 
-                                <ul class="weekdays">
+                                <ul className="weekdays">
                                 <li>Mo</li>
                                 <li>Tu</li>
                                 <li>We</li>
@@ -107,7 +111,7 @@ export default class Dashboard extends React.Component{
                                 <li>Su</li>
                                 </ul>
 
-                                <ul class="days">  
+                                <ul className="days">  
                                 <li></li>
                                 <li>1</li>
                                 <li>2</li>
@@ -117,7 +121,7 @@ export default class Dashboard extends React.Component{
                                 <li>6</li>
                                 <li>7</li>
                                 <li>8</li>
-                                <li><span class="active">9</span></li>
+                                <li><span className="active">9</span></li>
                                 <li>10</li>
                                 <li>11</li>
                                 <li>12</li>
@@ -144,7 +148,8 @@ export default class Dashboard extends React.Component{
                                 </ul>
                                                                 
                             </Col>
-                            <Col><div class="month">      
+                            <Col xs={12} sm={12} lg={3}>
+                            <div className="month">      
                                 <ul>
                                    
                                     <li>
@@ -154,7 +159,7 @@ export default class Dashboard extends React.Component{
                                 </ul>
                                 </div>
 
-                                <ul class="weekdays">
+                                <ul className="weekdays">
                                 <li>Mo</li>
                                 <li>Tu</li>
                                 <li>We</li>
@@ -164,7 +169,7 @@ export default class Dashboard extends React.Component{
                                 <li>Su</li>
                                 </ul>
 
-                                <ul class="days">  
+                                <ul className="days">  
                                 <li></li>
                                 <li></li>
                                 <li></li>
@@ -174,7 +179,7 @@ export default class Dashboard extends React.Component{
                                 <li>3</li>
                                 <li>4</li>
                                 <li>5</li>
-                                <li><span class="active">6</span></li>
+                                <li><span className="active">6</span></li>
                                 <li>7</li>
                                 <li>8</li>
                                 <li>9</li>
@@ -200,8 +205,8 @@ export default class Dashboard extends React.Component{
                             
                                 </ul>
                             </Col>
-                            <Col>
-                             <div class="month">      
+                            <Col xs={12} sm={12} lg={3}>
+                             <div className="month">      
                                 <ul>
                                     
                                     <li>
@@ -211,7 +216,7 @@ export default class Dashboard extends React.Component{
                                 </ul>
                                 </div>
 
-                                <ul class="weekdays">
+                                <ul className="weekdays">
                                 <li>Mo</li>
                                 <li>Tu</li>
                                 <li>We</li>
@@ -221,7 +226,7 @@ export default class Dashboard extends React.Component{
                                 <li>Su</li>
                                 </ul>
 
-                                <ul class="days">  
+                                <ul className="days">  
                                 <li></li>
                                 <li></li>
                                 <li></li>
@@ -238,7 +243,7 @@ export default class Dashboard extends React.Component{
                                 <li>10</li>
                                 <li>11</li>
                                 <li>12</li>
-                                <li><span class="active">13</span></li>
+                                <li><span className="active">13</span></li>
                                 <li>14</li>
                                 <li>15</li>
                                 <li>16</li>
@@ -259,8 +264,8 @@ export default class Dashboard extends React.Component{
                                 <li>31</li>
                                 </ul>
                             </Col>
-                            <Col>
-                            <div class="month">      
+                            <Col xs={12} sm={12} lg={3}>
+                            <div className="month">      
                                 <ul>
                                     
                                     <li>
@@ -270,7 +275,7 @@ export default class Dashboard extends React.Component{
                                 </ul>
                                 </div>
 
-                                <ul class="weekdays">
+                                <ul className="weekdays">
                                 <li>Mo</li>
                                 <li>Tu</li>
                                 <li>We</li>
@@ -280,7 +285,7 @@ export default class Dashboard extends React.Component{
                                 <li>Su</li>
                                 </ul>
 
-                                <ul class="days">  
+                                <ul className="days">  
                                 <li>1</li>
                                 <li>2</li>
                                 <li>3</li>
@@ -290,7 +295,7 @@ export default class Dashboard extends React.Component{
                                 <li>7</li>
                                 <li>8</li>
                                 <li>9</li>
-                                <li><span class="active">10</span></li>
+                                <li><span className="active">10</span></li>
                                 <li>11</li>
                                 <li>12</li>
                                 <li>13</li>
@@ -321,14 +326,14 @@ export default class Dashboard extends React.Component{
                         </Row>
                     </Container>
                </div>
-               <div class="collapse" id="collapseExample">
-                    <div class="card card-body">
+               <div className="collapse" id="collapseExample">
+                    <div className="card card-body">
                         
                         <Container>
                     
                         <Row>
-                            <Col>
-                            <div class="month">      
+                            <Col xs={12} sm={12} lg={3}>
+                            <div className="month">      
                             <ul>
                                     
                                     <li>
@@ -338,7 +343,7 @@ export default class Dashboard extends React.Component{
                                 </ul>
                                 </div>
 
-                                <ul class="weekdays">
+                                <ul className="weekdays">
                                 <li>Mo</li>
                                 <li>Tu</li>
                                 <li>We</li>
@@ -348,7 +353,7 @@ export default class Dashboard extends React.Component{
                                 <li>Su</li>
                                 </ul>
 
-                                <ul class="days">  
+                                <ul className="days">  
                                 <li></li>
                                 <li></li>
                                 <li>1</li>
@@ -358,7 +363,7 @@ export default class Dashboard extends React.Component{
                                 <li>5</li>
                                 <li>6</li>
                                 <li>7</li>
-                                <li><span class="active">8</span></li>
+                                <li><span className="active">8</span></li>
                                 <li>9</li>
                                 <li>10</li>
                                 <li>11</li>
@@ -385,7 +390,8 @@ export default class Dashboard extends React.Component{
                                 </ul>
                                                                 
                             </Col>
-                            <Col><div class="month">      
+                            <Col xs={12} sm={12} lg={3}>
+                            <div className="month">      
                             <ul>
                                     
                                     <li>
@@ -395,7 +401,7 @@ export default class Dashboard extends React.Component{
                                 </ul>
                                 </div>
 
-                                <ul class="weekdays">
+                                <ul className="weekdays">
                                 <li>Mo</li>
                                 <li>Tu</li>
                                 <li>We</li>
@@ -405,7 +411,7 @@ export default class Dashboard extends React.Component{
                                 <li>Su</li>
                                 </ul>
 
-                                <ul class="days">  
+                                <ul className="days">  
                                 <li></li>
                                 <li></li>
                                 <li></li>
@@ -415,7 +421,7 @@ export default class Dashboard extends React.Component{
                                 <li>2</li>
                                 <li>3</li>
                                 <li>4</li>
-                                <li><span class="active">5</span></li>
+                                <li><span className="active">5</span></li>
                                 <li>6</li>
                                 <li>7</li>
                                 <li>8</li>
@@ -443,8 +449,8 @@ export default class Dashboard extends React.Component{
                                 <li>30</li>
                                 </ul>
                             </Col>
-                            <Col>
-                             <div class="month">      
+                            <Col xs={12} sm={12} lg={3}>
+                             <div className="month">      
                              <ul>
                                     
                                     <li>
@@ -454,7 +460,7 @@ export default class Dashboard extends React.Component{
                                 </ul>
                                 </div>
 
-                                <ul class="weekdays">
+                                <ul className="weekdays">
                                 <li>Mo</li>
                                 <li>Tu</li>
                                 <li>We</li>
@@ -464,7 +470,7 @@ export default class Dashboard extends React.Component{
                                 <li>Su</li>
                                 </ul>
 
-                                <ul class="days">  
+                                <ul className="days">  
                                 <li>1</li>
                                 <li>2</li>
                                 <li>3</li>
@@ -489,7 +495,7 @@ export default class Dashboard extends React.Component{
                                 <li>22</li>
                                 <li>23</li>
                                 <li>24</li>
-                                <li><span class="active">25</span></li>
+                                <li><span className="active">25</span></li>
                                 <li>26</li>
                                 <li>27</li>
                                 <li>28</li>
@@ -499,8 +505,8 @@ export default class Dashboard extends React.Component{
                                 
                                 </ul>
                             </Col>
-                            <Col>
-                            <div class="month">      
+                            <Col xs={12} sm={12} lg={3}>
+                            <div className="month">      
                             <ul>
                                     
                                     <li>
@@ -510,7 +516,7 @@ export default class Dashboard extends React.Component{
                                 </ul>
                                 </div>
 
-                                <ul class="weekdays">
+                                <ul className="weekdays">
                                 <li>Mo</li>
                                 <li>Tu</li>
                                 <li>We</li>
@@ -520,7 +526,7 @@ export default class Dashboard extends React.Component{
                                 <li>Su</li>
                                 </ul>
 
-                                <ul class="days">  
+                                <ul className="days">  
                                 <li></li>
                                 <li></li>
                                 <li></li>
@@ -530,7 +536,7 @@ export default class Dashboard extends React.Component{
                                 <li>4</li>
                                 <li>5</li>
                                 <li>6</li>
-                                <li><span class="active">7</span></li>
+                                <li><span className="active">7</span></li>
                                 <li>8</li>
                                 <li>9</li>
                                 <li>10</li>
@@ -563,8 +569,8 @@ export default class Dashboard extends React.Component{
                     <Container>
                     
                         <Row>
-                            <Col>
-                            <div class="month">      
+                            <Col xs={12} sm={12} lg={3}>
+                            <div className="month">      
                             <ul>
                                     
                                     <li>
@@ -574,7 +580,7 @@ export default class Dashboard extends React.Component{
                                 </ul>
                                 </div>
 
-                                <ul class="weekdays">
+                                <ul className="weekdays">
                                 <li>Mo</li>
                                 <li>Tu</li>
                                 <li>We</li>
@@ -584,11 +590,11 @@ export default class Dashboard extends React.Component{
                                 <li>Su</li>
                                 </ul>
 
-                                <ul class="days">  
+                                <ul className="days">  
                                
                                 <li></li>
                                 <li>1</li>
-                                <li><span class="active">2</span></li>
+                                <li><span className="active">2</span></li>
                                 <li>3</li>
                                 <li>4</li>
                                 <li>5</li>
@@ -620,7 +626,8 @@ export default class Dashboard extends React.Component{
                                 </ul>
                                                                 
                             </Col>
-                            <Col><div class="month">      
+                            <Col xs={12} sm={12} lg={3}>
+                            <div className="month">      
                             <ul>
                                     
                                     <li>
@@ -630,7 +637,7 @@ export default class Dashboard extends React.Component{
                                 </ul>
                                 </div>
 
-                                <ul class="weekdays">
+                                <ul className="weekdays">
                                 <li>Mo</li>
                                 <li>Tu</li>
                                 <li>We</li>
@@ -640,7 +647,7 @@ export default class Dashboard extends React.Component{
                                 <li>Su</li>
                                 </ul>
 
-                                <ul class="days">  
+                                <ul className="days">  
                                 <li></li>
                                 <li>1</li>
                                 <li>2</li>
@@ -650,7 +657,7 @@ export default class Dashboard extends React.Component{
                                 <li>6</li>
                                 <li>7</li>
                                 <li>8</li>
-                                <li><span class="active">9</span></li>
+                                <li><span className="active">9</span></li>
                                 <li>10</li>
                                 <li>11</li>
                                 <li>12</li>
@@ -676,8 +683,8 @@ export default class Dashboard extends React.Component{
                               
                                 </ul>
                             </Col>
-                            <Col>
-                             <div class="month">      
+                            <Col xs={12} sm={12} lg={3}>
+                             <div className="month">      
                              <ul>
                                    
                                    <li>
@@ -687,7 +694,7 @@ export default class Dashboard extends React.Component{
                                </ul>
                                </div>
 
-                               <ul class="weekdays">
+                               <ul className="weekdays">
                                <li>Mo</li>
                                <li>Tu</li>
                                <li>We</li>
@@ -697,7 +704,7 @@ export default class Dashboard extends React.Component{
                                <li>Su</li>
                                </ul>
 
-                               <ul class="days">  
+                               <ul className="days">  
                                <li></li>
                                <li></li>
                                <li></li>
@@ -707,7 +714,7 @@ export default class Dashboard extends React.Component{
                                <li>3</li>
                                <li>4</li>
                                <li>5</li>
-                               <li><span class="active">6</span></li>
+                               <li><span className="active">6</span></li>
                                <li>7</li>
                                <li>8</li>
                                <li>9</li>
@@ -735,8 +742,8 @@ export default class Dashboard extends React.Component{
                            
                                </ul>
                             </Col>
-                            <Col>
-                            <div class="month">      
+                            <Col xs={12} sm={12} lg={3}>
+                            <div className="month">      
                             <ul>
                                     
                                     <li>
@@ -746,7 +753,7 @@ export default class Dashboard extends React.Component{
                                 </ul>
                                 </div>
 
-                                <ul class="weekdays">
+                                <ul className="weekdays">
                                 <li>Mo</li>
                                 <li>Tu</li>
                                 <li>We</li>
@@ -756,11 +763,11 @@ export default class Dashboard extends React.Component{
                                 <li>Su</li>
                                 </ul>
 
-                                <ul class="days">  
+                                <ul className="days">  
                                
                                 <li></li>
                                 <li>1</li>
-                                <li><span class="active">2</span></li>
+                                <li><span className="active">2</span></li>
                                 <li>3</li>
                                 <li>4</li>
                                 <li>5</li>
@@ -799,9 +806,10 @@ export default class Dashboard extends React.Component{
                  <h4 className="head">All my abscences in 2019</h4><br></br>
                  <Row>
                  <Col>
+                 <div className="overflow">
                  <table className="table1">
                  
-                             
+                             <tbody>
                                 <tr>
                                     <td>Type</td>
                                     <td> Deducted</td>
@@ -838,9 +846,10 @@ export default class Dashboard extends React.Component{
                                     <td>Mayowa</td>
                                     <td>Approved</td>
                                 </tr>
-                                
+                                </tbody>
                                
                                 </table>
+                                </div>
                  
 
                

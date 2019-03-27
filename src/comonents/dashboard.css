@@ -79,7 +79,7 @@ table {
     color: white !important
   }
   
-  /* Add media queries for smaller screens */
+   
   @media screen and (max-width:720px) {
     .weekdays li, .days li {width: 13.1%;}
   }
@@ -116,5 +116,9 @@ table {
 
 .table1 {
   margin-left: 100px;
-  width:80%
+  width:80%;
+  
+}
+.overflow {
+  overflow-x: auto;
 }

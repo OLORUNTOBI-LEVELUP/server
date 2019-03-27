@@ -60,16 +60,20 @@ export default class Abscencerequest extends React.Component {
 
     return (
       <div>
-                    <Navbar bg="dark" variant="dark">
-                  <Navbar.Brand href="/">Leave.Management</Navbar.Brand>
-                  <Nav className="ml-auto">
-                  <Nav.Link href="/dashboard">Dashboard</Nav.Link>
-                  <Nav.Link href="/teamview">Team View</Nav.Link>
-                  <Nav.Link href="/abscencerequest">Abscence Request</Nav.Link>
-                  <Nav.Link href="/Signin">Sign out</Nav.Link>
-                  </Nav>
-              
-                 </Navbar>
+                   <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+                    <Navbar.Brand href="/">Leave Management</Navbar.Brand>
+                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                    <Navbar.Collapse id="responsive-navbar-nav">
+                        <Nav className="ml-auto">
+                        <Nav.Link href="/dashboard">Dashboard</Nav.Link>
+                        <Nav.Link href="/teamview">Team view</Nav.Link>
+                        <Nav.Link href="/abscencerequest">Abscence request</Nav.Link>      
+                        <Nav.Link href="/Signin">Sign out</Nav.Link>
+                    
+                        </Nav>
+                    
+                    </Navbar.Collapse>
+                </Navbar>;
       <div class="modal-dialog">
                 
       <div class="modal-content">
@@ -84,7 +88,7 @@ export default class Abscencerequest extends React.Component {
             
             <div class="form-group">
               <label class="control-label">Leave type:</label>
-              <select class="form-control" id="leave_type" name="leave_type" required>
+              <select class="form-control adjust"  required>
                   <option></option>
                   <option value="0" data-tom="Holiday">Holiday</option>
                   <option value="1" data-tom="Sick Leave">Sick Leave</option>
