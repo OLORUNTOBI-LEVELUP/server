@@ -12,9 +12,9 @@ const server = http.createServer(app);
 
 //production mode
 if(process.env.NODE_ENV !== 'production') {
-  app.use("*", express.static(path.join(__dirname, '../public')));
+  app.use(express.static(path.join(__dirname, '../public')));
 } else {
-    app.use("*", express.static(path.join(__dirname, '../build')));
+    app.use(express.static(path.join(__dirname, '../build')));
 }
 //build mode
 app.get('/', (req, res) => {
