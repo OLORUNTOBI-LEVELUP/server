@@ -8,15 +8,16 @@ const port = process.env.PORT || 5000;
 
 const server = http.createServer(app);
 
+app.use(express.json());
+app.use(express.urlencoded({extended: true}));
 
-
-//production mode
+//production mode/dev mode
 if(process.env.NODE_ENV !== 'production') {
   app.use(express.static(path.join(__dirname, '../public')));
 } else {
     app.use(express.static(path.join(__dirname, '../build')));
 }
-//build mode
+
 app.get('/', (req, res) => {
     if(process.env.NODE_ENV !== 'production'){
   res.sendFile(path.join(__dirname, '../public/index.html'));
